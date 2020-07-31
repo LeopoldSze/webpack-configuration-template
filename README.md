@@ -67,19 +67,19 @@ yarn i
 
 分类配置文件：
 
-​						<img src="C:\Users\25345\AppData\Roaming\Typora\typora-user-images\image-20200731111942097.png" alt="image-20200731111942097" style="zoom:80%;" />
+​						<img src="./conf-imgs/image-20200731111942097.png" alt="image-20200731111942097" style="zoom:80%;" />
 
 主配置文件：
 
-​						![image-20200731112044954](C:\Users\25345\AppData\Roaming\Typora\typora-user-images\image-20200731112044954.png)
+​						<img src="./conf-imgs/image-20200731112044954.png" alt="image-20200731112044954" style="zoom:80%;" />
 
 分类配置加载：
 
-​						<img src="C:\Users\25345\AppData\Roaming\Typora\typora-user-images\image-20200731112401666.png" alt="image-20200731112401666" style="zoom:80%;" />
+​						<img src="./conf-imgs/image-20200731112401666.png" alt="image-20200731112401666" style="zoom:80%;" />
 
 分类文件处理：
 
-​						<img src="C:\Users\25345\AppData\Roaming\Typora\typora-user-images\image-20200731112507037.png" alt="image-20200731112507037" style="zoom:80%;" />
+​						<img src="./conf-imgs/image-20200731112507037.png" alt="image-20200731112507037" style="zoom:80%;" />
 
 #### 5.脚本命令运行
 
