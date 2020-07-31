@@ -1,5 +1,6 @@
 const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin'); // stylelint插件
+const { ESLINT } = require('./conf/index');
 
 // 测试stylelint
 // module.exports = {
@@ -41,12 +42,12 @@ module.exports = function (env, argv) {
                 presets: ['@babel/preset-env']
               }
             },
-            {
+            ...ESLINT ? [{
               loader: 'eslint-loader',
               options: {
                 exclude: /node_modules|bower_modules/
               }
-            }
+            }] : []
           ]
         },
         // 处理css
@@ -78,20 +79,7 @@ module.exports = function (env, argv) {
             }
           ]
         },
-        // 处理图片(1)
-        {
-          test: /\.(jpg|png|bmp|gif)$/i, // 以jpg、png、bmp、gif结尾的文件
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                outputPath: 'imgs/', // 相对于output.path的相对路径
-                publicPath: env.production ? './build/imgs/' : './imgs/' // 输出到css的路径
-              }
-            }
-          ]
-        },
-        // 处理图片(2)
+        // 处理图片
         {
           test: /\.(jpg|png|bmp|gif)$/i, // 以jpg、png、bmp、gif结尾的文件
           use: [
@@ -99,7 +87,7 @@ module.exports = function (env, argv) {
               loader: 'url-loader',
               options: {
                 outputPath: 'imgs/', // 相对于output.path的相对路径
-                publicPath: env.production ? './build/imgs/' : './imgs/', // 输出到css的路径
+                publicPath: env.production ? './imgs/' : './imgs/', // 输出到css的路径
                 limit: 4*1024 // 大于4K使用file-loader生成文件，小于4K使用base64直接存储在css，减少请求次数
               }
             }
